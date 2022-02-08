@@ -5,8 +5,8 @@
 using namespace std;
 struct Drib         //Структура дробу
 {
-    int chis;   //зміна для чисельника
-    int znam;   //зміна для знаменника 
+    int chis;   //змінна для чисельника
+    int znam;   //змінна для знаменника 
 
     void input() {  //ф-ція вводу елемннтів дробу
         cout << "Enter numerator = ";
@@ -47,7 +47,7 @@ void sumDrib(Drib one, Drib two) {      //Ф-ція сума дробів
         printDrib(sum, one.znam);                         //Виводимо дріб на екран 
     }
     else {                                  //Якщо знаменники різні 
-        int z1 = one.znam, z2 = two.znam;       //зміна для збереження знаменників
+        int z1 = one.znam, z2 = two.znam;       //змінна для збереження знаменників
         one.chis = one.chis * z2;
         one.znam = one.znam * z2;           //зводимо до однакового знаменника
         two.chis = two.chis * z1;
@@ -68,7 +68,7 @@ void sumDrib(Drib one, Drib two) {      //Ф-ція сума дробів
 }
 void diffDrib(Drib one, Drib two) {         //Ф-ція для різниці дробів
 
-    int diff = 0;            //зміна для відповіді
+    int diff = 0;            //змінна для відповіді
 
     if (one.znam == two.znam) {                 //Якщо знаменники однакові 
         diff = one.chis - two.chis;             //віднімаємо чисельники
@@ -84,7 +84,7 @@ void diffDrib(Drib one, Drib two) {         //Ф-ція для різниці д
         printDrib(diff, one.znam);          //Виводимо на екран відповідь 
     }
     else {                                  //Якщо знаменники різні
-        int z1 = one.znam, z2 = two.znam;   //зміна для збереження знаменників
+        int z1 = one.znam, z2 = two.znam;   //змінна для збереження знаменників
         one.chis = one.chis * z2;
         one.znam = one.znam * z2;
         two.chis = two.chis * z1;           //зводимо до однакового знаменника
